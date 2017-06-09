@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Home</title>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js"></script>
+
+
+</head>
+
+<body>
+<div class="loader"></div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="brand" class="navbar-brand" href="#">Student Account Dashboard</a>
+        </div>
+      <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Welcome Back, USER</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search..." />
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <div class="header-area">
+              <h2 class="side-nav-header">Applications</h2>
+            </div>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Reports</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <div class="header-area">
+              <h2 class="side-nav-header">Academic</h2>
+            </div>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <div class="header-area">
+              <h2 class="side-nav-header">Campus</h2>
+            </div>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <div class="header-area">
+              <h2 class="side-nav-header">Actions</h2>
+            </div>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Home</h1>
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="item active">
+              <img class="img-responsive" src="../img/Grand-Valley-Pew-Library.jpg" />
+                <div class="carousel-caption">
+                  <h1 class="jumbo-text">Hello User!</h1>
+                  <p>
+                    Please select from the items below, or use the side navigation menu.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="row text-center">
+            <div class="col-md-4 border-right">
+              <div class="thumbnail">
+                <h3>Campus Map</h3>
+                <img class="img-responsive" src="http://placehold.it/350x200" />
+              </div>
+            </div>
+            <div class="col-md-4 border-right">
+              <div class="thumbnail">
+                <h3>Student Schedule</h3>
+                <img class="img-responsive" src="http://placehold.it/350x200" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <h3>GVSU Email</h3>
+                <img class="img-responvie" src="http://placehold.it/350x200" />
+              </div>
+            </div>
+          </div>
+</body>
+
+</html>
