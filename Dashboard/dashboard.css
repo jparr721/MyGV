@@ -34,12 +34,15 @@ body {
   color: #fff;
 }
 
+.dropdown-menu ul li a:hover {
+  background: #1976D2;
+}
+
 /*
  * Sidebar
  */
 
 .side-nav-header {
-  color: #2196F3;
   margin-left: 10px;
 }
 
