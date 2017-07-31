@@ -1,0 +1,18 @@
+html, body, .content {
+  background-color: #e6e6e6;
+}
+
+/** Dashboard **/
+.img-responsive {
+  width: 100%;
+}
+
+#dashboard {
+  height: 100vh;
+}
+
+.info {
+  background: linear-gradient(130deg, #ecf0f1 -25%, #95a5a6 10%, #34495e 100%);
+}
+
+/** End Dashboard **/
