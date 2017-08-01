@@ -108,7 +108,7 @@ class Header extends Component {
             <Typography type="title" color="inherit" className={classes.flex}>
               MyGV&trade;
             </Typography>
-            <Dropdown userName="Jeffries, Jim"/>
+            <Dropdown userName="Stefferson, Stephanie"/>
           </Toolbar>
         </AppBar>
       </div>

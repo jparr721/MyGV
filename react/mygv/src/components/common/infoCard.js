@@ -36,7 +36,7 @@ class InfoCard extends Component{
               {this.props.cardTitle}
             </Typography>
             <Typography type="body1">
-              {this.props.semester}
+              {this.props.subheading}
             </Typography>
             {this.props.children}
           </CardContent>

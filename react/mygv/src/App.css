@@ -1,5 +1,15 @@
 html, body, .content {
   background-color: #e6e6e6;
+  overflow-y: hidden;
+}
+
+h1 {
+  color: white;
+}
+
+.muted {
+  font-size: 14px;
+  color: #bcbfc4;
 }
 
 /** Dashboard **/
@@ -20,6 +30,16 @@ html, body, .content {
 .info {
   background: linear-gradient(130deg, #ecf0f1 -25%, #95a5a6 10%, #34495e 100%);
   min-height: 95vh;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.box-shadow {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.empty-card {
+  margin: 0 auto;
 }
 
 /** End Dashboard **/

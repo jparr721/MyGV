@@ -9,6 +9,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10",
+    "react-twitter-widgets": "^1.4.0",
     "typeface-roboto": "0.0.31"
   },
   "scripts": {
