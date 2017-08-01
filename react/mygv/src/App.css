@@ -9,10 +9,17 @@ html, body, .content {
 
 #dashboard {
   height: 100vh;
+  margin-top: 20px;
+}
+
+.cards {
+  overflow-y: auto;
+  margin-bottom: 20px;
 }
 
 .info {
   background: linear-gradient(130deg, #ecf0f1 -25%, #95a5a6 10%, #34495e 100%);
+  min-height: 95vh;
 }
 
 /** End Dashboard **/
