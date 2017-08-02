@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
 import Button from 'material-ui/Button';
 import Menu, { MenuItem } from 'material-ui/Menu';
+import { withStyles, createStyleSheet } from 'material-ui/styles';
+import classNames from 'classnames';
+import Avatar from 'material-ui/Avatar';
+
+const styleSheet = createStyleSheet({
+  row: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  avatar: {
+    margin: 10,
+  },
+  bigAvatar: {
+    width: 60,
+    height: 60,
+  },
+});
 
 class Dropdown extends Component {
   state = {
@@ -17,11 +34,16 @@ class Dropdown extends Component {
   };
 
   render() {
+    const classes = this.props.classes;
     return (
       <div>
-        <Button color="contrast" aria-owns="simple-menu" aria-haspopup="true" onClick={this.handleClick}>
-          {this.props.userName}
-        </Button>
+      <Avatar
+        src={require('../../profile.jpg')}
+        className={classNames(classes.avatar, classes.bigAvatar)}
+        aria-owns="simple-menu"
+        aria-haspopup="true"
+        onClick={this.handleClick}/>
+
         <Menu
           id="simple-menu"
           anchorEl={this.state.anchorEl}
@@ -37,4 +59,8 @@ class Dropdown extends Component {
   }
 }
 
-export default Dropdown;
+export default withStyles(styleSheet)(Dropdown);
+
+// <Button color="contrast" aria-owns="simple-menu" aria-haspopup="true" onClick={this.handleClick}>
+//   {this.props.userName}
+// </Button>

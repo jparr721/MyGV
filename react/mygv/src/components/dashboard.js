@@ -9,7 +9,10 @@ import Divider from 'material-ui/Divider';
 import InfoCard from './common/infoCard';
 import Grades from './common/grades';
 import Feed from './feed';
-import Modal from '../components/common/modal'
+import Modal from '../components/common/modal';
+import SimpleListItem from './common/simpleListItem';
+import QuickLink from './common/quickLink';
+import Grid from 'material-ui/Grid';
 
 const styles = createStyleSheet(theme => ({
   root: {
@@ -31,7 +34,7 @@ class Dashboard extends Component {
     const subText = (
       <div>
         <h5>Grand Valley offers tutoring free of charge to students who need help in their classes,
-        you can check it out <a href="http://www.gvsu.edu/tc/" target="_blank">here</a></h5>
+        you can check it out <a href="http://www.gvsu.edu/tc/" target="_blank">here.</a></h5>
       </div>
     )
     return (
@@ -44,17 +47,66 @@ class Dashboard extends Component {
                 subText={subText}/>
             </Grades>
             <Grades class="MTH 225" grade="C" status='card-warning' />
-            <Grades class="CIS 163" grade="B-" status='card-success' />
+            <Grades class="ANT 315" grade="B-" status='card-success' />
             <Grades class="BIO 120" grade="A" status='card-success' />
           </InfoCard>
-          <InfoCard cardTitle="Schedule" semester="Fall 2017">
+          <InfoCard cardTitle="Schedule" subheading="Fall 2017">
+            <SimpleListItem text="CIS 163" subtext="MON/WED/FRI 10-11:50" />
+            <SimpleListItem text="MTH 202" subtext="MON/WED 11-1:50" />
+            <SimpleListItem text="MTH 225" subtext="TUE/THU 8-8:50" />
+            <SimpleListItem text="ANT 315" subtext="MON/WED/FRI 9-9:50" />
+            <SimpleListItem text="BIO 120" subtext="TUE/THU 10-11:50" />
           </InfoCard>
         </div>
 
-        <div className="col-5 info box-shadow">
-          <InfoCard cardTitle="Account Balance" subheading="$947.96">
-
-          </InfoCard>
+        <div className="col-5 info box-shadow text-center center-panel">
+          <QuickLink>
+            <InfoCard cardTitle="Campus Resources" />
+            <div className="row">
+              <div className="col-4 resources">
+                <a href="http://www.gvsu.edu/maps.htm" target="_blank"><h4>Campus Map</h4></a>
+                <i className="fa fa-map-marker fa-5x" aria-hidden="true"></i>
+              </div>
+              <div className="col-4 resources">
+                <h4>GVSU Email</h4>
+                <i className="fa fa-envelope fa-5x" aria-hidden="true"></i>
+              </div>
+              <div className="col-4 resources">
+                <h4>Library Info</h4>
+                <i className="fa fa-map-marker fa-5x" aria-hidden="true"></i>
+              </div>
+            </div>
+          </QuickLink>
+          <QuickLink>
+            <InfoCard cardTitle="Academic Resources" />
+            <div className="row">
+              <div className="col-6 resources">
+                <h4>Grades</h4>
+                <i className="fa fa-graduation-cap fa-5x" aria-hidden="true"></i>
+              </div>
+              <div className="col-6 resources">
+                <h4>Schedule</h4>
+                <i className="fa fa-list-alt fa-5x" aria-hidden="true"></i>
+              </div>
+            </div>
+          </QuickLink>
+          <QuickLink>
+            <InfoCard cardTitle="Account Resources"></InfoCard>
+            <div className="row">
+              <div className="col-4 resources">
+                <h4>Balance</h4>
+                <i className="fa fa-money fa-5x" aria-hidden="true"></i>
+              </div>
+              <div className="col-4 resources">
+                <h4>Transactions</h4>
+                <i className="fa fa-exchange fa-5x" aria-hidden="true"></i>
+              </div>
+              <div className="col-4 resources">
+                <h4>Holds</h4>
+                <i className="fa fa-hand-paper-o fa-5x" aria-hidden="true"></i>
+              </div>
+            </div>
+          </QuickLink>
         </div>
 
         <div className="col-4 user">
@@ -66,7 +118,7 @@ class Dashboard extends Component {
               </h3>
             </div>
           </InfoCard>
-          <InfoCard cardTitle="Events">
+          <InfoCard cardTitle="Recent Tweets">
             <Feed />
           </InfoCard>
         </div>

@@ -9,6 +9,7 @@ import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
+import SearchBar from './common/searchbar';
 
 
 
@@ -54,6 +55,7 @@ class Header extends Component {
             <Typography type="title" color="inherit" className={classes.flex}>
               MyGV&trade;
             </Typography>
+            <SearchBar />
             <Dropdown userName="Stefferson, Stephanie"/>
           </Toolbar>
         </AppBar>

@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Drawer from 'material-ui/Drawer';
 import Button from 'material-ui/Button';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
+
+// Icons
+import AccountBoxIcon from 'material-ui-icons/AccountBox';
 import InboxIcon from 'material-ui-icons/Inbox';
-import DraftsIcon from 'material-ui-icons/Drafts';
-import StarIcon from 'material-ui-icons/Star';
-import SendIcon from 'material-ui-icons/Send';
-import MailIcon from 'material-ui-icons/Mail';
-import DeleteIcon from 'material-ui-icons/Delete';
-import ReportIcon from 'material-ui-icons/Report';
+import AttachMoneyIcon from 'material-ui-icons/AttachMoney';
+import SchoolIcon from 'material-ui-icons/School';
 import DashboardIcon from 'material-ui-icons/Dashboard';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
@@ -48,64 +48,42 @@ class SideMenu extends Component {
 
     const mailFolderListItems = (
       <div>
-        <ListItem button>
+        <Link to='/'><ListItem button>
           <ListItemIcon>
             <DashboardIcon />
           </ListItemIcon>
           <ListItemText primary="Home" />
-        </ListItem>
-        <ListItem button>
+        </ListItem></Link>
+        <Divider />
+        <Link to='/account'><ListItem button>
           <ListItemIcon>
-            <StarIcon />
+            <AttachMoneyIcon />
           </ListItemIcon>
           <ListItemText primary="Account" />
-        </ListItem>
+        </ListItem></Link>
+        <Divider />
         <ListItem button>
           <ListItemIcon>
-            <SendIcon />
+            <SchoolIcon />
           </ListItemIcon>
-          <ListItemText primary="Schedule" />
+          <ListItemText primary="Academic" />
         </ListItem>
+        <Divider />
         <ListItem button>
           <ListItemIcon>
-            <DraftsIcon />
+            <AccountBoxIcon />
           </ListItemIcon>
-          <ListItemText primary="Map" />
+          <ListItemText primary="Profile" />
         </ListItem>
       </div>
     );
 
-    const otherMailFolderListItems = (
-      <div>
-        <ListItem button>
-          <ListItemIcon>
-            <MailIcon />
-          </ListItemIcon>
-          <ListItemText primary="All mail" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <DeleteIcon />
-          </ListItemIcon>
-          <ListItemText primary="Trash" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <ReportIcon />
-          </ListItemIcon>
-          <ListItemText primary="Spam" />
-        </ListItem>
-      </div>
-    );
+
 
     const sideList = (
       <div>
         <List className={classes.list} disablePadding>
           {mailFolderListItems}
-        </List>
-        <Divider />
-        <List className={classes.list} disablePadding>
-          {otherMailFolderListItems}
         </List>
       </div>
     );

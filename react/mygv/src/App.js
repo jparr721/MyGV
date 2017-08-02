@@ -10,7 +10,7 @@ import 'typeface-roboto';
 
 //Pages
 import Header from '../src/components/header';
-import Dashboard from '../src/components/dashboard';
+import Routes from '../src/components/routes';
 
 const theme = createMuiTheme({
   palette: createPalette({
@@ -26,7 +26,7 @@ class App extends Component {
       <MuiThemeProvider theme={theme}>
         <div className="container-fluid content">
           <Header />
-          <Dashboard />
+          <Routes />
         </div>
       </MuiThemeProvider>
     );
