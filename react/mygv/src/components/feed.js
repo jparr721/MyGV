@@ -7,7 +7,7 @@ const Feed = () => {
       <a target="_blank" className="twitter-timeline" href="https://twitter.com/GVSUStudentLife">Tweets by GVSUStudentLife</a>
       <Timeline
         dataSource={{sourceType: "profile", screenName:"GVSUStudentLife"}}
-        options={{username: "GVSU Student Life", height: "150"}} />
+         />
     </div>
   );
 };

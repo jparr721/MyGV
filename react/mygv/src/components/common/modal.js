@@ -9,10 +9,10 @@ import Dialog, {
 } from 'material-ui/Dialog';
 import Slide from 'material-ui/transitions/Slide';
 
-const styles = createStyleSheet(theme ({
+const styles = createStyleSheet(theme => ({
   modalStyle: {
-    backgroundColor: '#2196F3'
-  }
+    backgroundColor: '#2196F3',
+  },
 }));
 
 class Modal extends Component {
@@ -27,11 +27,11 @@ class Modal extends Component {
   render() {
     const classes = this.props.classes;
     return (
-      <div {classes.modalStyle}>
-        <Button onClick={() => this.setState({ open: true })}>Slide in alert dialog</Button>
-        <Dialog open={this.state.open} transition={Slide} onRequestClose={this.handleRequestClose} color="primary">
+      <div>
+        <Button onClick={() => this.setState({ open: true })}>{this.props.buttonTitle}</Button>
+        <Dialog open={this.state.open} transition={Slide} onRequestClose={this.handleRequestClose}>
           <DialogTitle>
-            {this.props.buttonTitle}
+            {this.props.title}
           </DialogTitle>
           <DialogContent>
             <DialogContentText>

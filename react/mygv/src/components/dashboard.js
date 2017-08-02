@@ -28,13 +28,20 @@ class Dashboard extends Component {
 
   render() {
     const classes = this.props.classes;
+    const subText = (
+      <div>
+        <h5>Grand Valley offers tutoring free of charge to students who need help in their classes,
+        you can check it out <a href="http://www.gvsu.edu/tc/" target="_blank">here</a></h5>
+      </div>
+    )
     return (
       <div id="dashboard" className="row">
         <div className="col-3 cards">
           <InfoCard cardTitle="Grades" subheading="Fall 2017">
             <Grades class="CIS 163" grade="B+" status='card-success' />
             <Grades class="MTH 202" grade="D" status='card-danger'>
-              <Modal />
+              <Modal buttonTitle="Having trouble in ths course?" title="Need some help?"
+                subText={subText}/>
             </Grades>
             <Grades class="MTH 225" grade="C" status='card-warning' />
             <Grades class="CIS 163" grade="B-" status='card-success' />
@@ -44,13 +51,13 @@ class Dashboard extends Component {
           </InfoCard>
         </div>
 
-        <div className="col-6 info box-shadow">
-          <Typography className="text-center" type="headline">
-            <Feed />
-          </Typography>
+        <div className="col-5 info box-shadow">
+          <InfoCard cardTitle="Account Balance" subheading="$947.96">
+
+          </InfoCard>
         </div>
 
-        <div className="col-3 user">
+        <div className="col-4 user">
           <img className="img-responsive box-shadow" src={require('../profile.jpg')}/>
           <InfoCard cardTitle="Hello, Stephanie" subheading="August 4, 2017">
             <div className="empty-card">
@@ -58,6 +65,9 @@ class Dashboard extends Component {
                 No New Notifications.
               </h3>
             </div>
+          </InfoCard>
+          <InfoCard cardTitle="Events">
+            <Feed />
           </InfoCard>
         </div>
 

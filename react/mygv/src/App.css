@@ -17,6 +17,10 @@ h1 {
   width: 100%;
 }
 
+.user {
+  overflow-y: auto;
+}
+
 #dashboard {
   height: 100vh;
   margin-top: 20px;
@@ -32,6 +36,7 @@ h1 {
   min-height: 95vh;
   height: 100%;
   overflow-y: auto;
+  padding: 15px;
 }
 
 .box-shadow {

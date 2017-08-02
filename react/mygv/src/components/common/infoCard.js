@@ -11,8 +11,8 @@ const styles = createStyleSheet(theme => ({
   },
   card: {
 
-    minWidth: 275,
-    minHeight: '40vh',
+    // minWidth: 275,
+    // minHeight: '20vh',
   },
   title: {
     marginBottom: 16,
@@ -33,10 +33,10 @@ class InfoCard extends Component{
         <Card className={classes.card}>
           <CardContent>
             <Typography type="headline">
-              {this.props.cardTitle}
+              <h2>{this.props.cardTitle}</h2>
             </Typography>
             <Typography type="body1">
-              {this.props.subheading}
+              <h4>{this.props.subheading}</h4>
             </Typography>
             {this.props.children}
           </CardContent>
